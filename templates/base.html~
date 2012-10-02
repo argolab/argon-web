@@ -1,68 +1,121 @@
-{% extends 'banner.html' %}
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <title>逸仙时空 Yat-sen Channel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-{% block banner %}
-     <div class="span2 pull-left" id="user-beside-banner">
-           <div class="well sidebar-nav user-banner">
-                <ul class="nav nav-list">
-                    <li>
-                      <div class="container-fluid">
-                         <div class="row-fluid">
-                            <!---<div style="height:60px"></div>--->
-                            <span>
-                                <img  class="argo-img" src="/static/images/gcc.jpg"/>
-                                <p>guest</p>
-                            </span>
-                          </div>
-                        </div> 
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="#"><i class="icon-folder-open"></i>收藏夹</a></li>
-                        <li><a href="#"><i class="icon-envelope"></i>邮件</a></li>
-                        <li><a href="#"><i class="icon-cog"></i>个人设置</a></li>
-                        <li><a href="#"><i class="icon-flag"></i>帮助</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">公告..</a></li>
-                    </ul>
-             </div><!--/.well -->
-    
-             <div class="well sidebar-nav user-banner">
-                  <ul class="nav nav-list">
-                      <li class="divider"></li>
-                      <li><a href="#">广告</a></li>
-                  </ul>
-              </div><!--/.well -->
-    </div> 
-    <div class="container-fluid" id="main-block">
-         <div class="row-fluid">
-	   <!--- <div style="height:70px"></div>--->
-            <div class="span8">
-                {% block content %}
-                {% endblock %}
+        <!-- Le styles -->
+        <link rel="stylesheet" href="{{ static_url("argo.css") }}" type="text/css"/>
+        <link rel="stylesheet" href="{{ static_url("bootstrap.css") }}" type="text/css"/>
+        <link rel="stylesheet" href="{{ static_url("bootstrap-responsive.css") }}" type="text/css"/>
+        <link href="/static/css/bootstrap.css" rel="stylesheet">
+        <link href="/static/css/argo.css" rel="stylesheet">
+        <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet"> -->
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="/static/favicon.ico">
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-146052-10']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+             })();
+        </script>
+	<script src="/static/js/lib/jquery.js"></script>
+	<script src="/static/js/lib/bootstrap.js"></script>
+	<script src="/static/js/argo.js"></script>                                     
+    </head>
+    <body>
+       <!-- start navbar -->
+       <div class="navbar navbar-fixed-top navbar-inverse ">  
+            <div class="navbar-inner">
+                <div class="container-fluid ">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/">逸仙时空 Yat-sen Channel</a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a href="/">首页</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">讨论区<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">0区bbs 系统</a></li>
+                                    <li><a href="#">1区校园资讯</a></li>
+                                    <li><a href="#">2区谈天说爱</a></li>
+                                    <li><a href="#">3区社会信息</a></li>
+                                </ul>
+                             </li> 
+                             <li><a>more...</a></li>
+                        </ul>
+                        <ul class="nav pull-right">
+                            <form class="navbar-search pull-left" action="">
+                                <input type="text" class="search-query span2" placeholder="frgg">
+                                <button type="submit" class="btn">搜索</button>
+                            </form>
+                        </ul>
+                    </div>
+                </div>
             </div>
-	     <div id="push-banner" class="pull-right user-banner sidebar-nav">
-	       <div id="push-helper" class="pull-right"></div>
-	       <div id="push-container" class="push-right">
-		 <div class="container-fluid">
-		   <ul class="nav nav-list">
-		     <li>argo工具栏</li>
-                     <li class="divider"></li>
-		     <li><a href="#">查看好友状态</li>
-		     <li><a href="#">板块十大</li>
-		     <li><a href="#">个人文集</li>
-		   </ul>
-		 </div>
-	       </div>
+         </div>
+
+	 <div style="height:50px"></div>
+	 <div>
+             <div class="pull-left" id="left-banner">
+	         <div class="dark" id="user-banner">
+		    {% if not IsLogin %}
+	                {% block loginbefore %}
+	                {% end %}
+		    {% else %}
+		        {% block loginafter %}
+		        {% end %}
+		    {% end %}
+	         </div>
+	         <div class="dark" id="advertise">
+	            {% block advertise %}
+		    {% end %}
+	         </div>
 	     </div>
-           </div> 
-    <!-- row-fluid -->
-           <hr/>
-           <footer class="footer">
-             <p>&copy Life is originally a tragedy.</p>
-           </footer>
-
-    </div> <!--/ fluid-container -->
-
-{% endblock %}
-   
-
-
+	 </div>
+         <div>
+	     <div class="pull-right" id="main-block">
+	          <div class="row-fluid">
+                       <div class="span9">
+	                   {% block mainblock %}
+	                   {% end %}
+		       </div>
+		       <div class="span3">
+			    <div id="right-top" class="dark">
+			        {% block righttop%}
+			        {% end %}
+			    </div>
+			    <div class="right-buttom dark">
+			        {% block rightbuttom %}
+			        {% end %}
+			    </div>
+		       </div>
+		  </div>
+	     </div>
+	</div>
+        <div class="pre"></div>
+	<hr />
+	<footer class="footer">
+	     <p>&copy Life is originally a tragedy.</p>
+	</footer>
+    </body>
+</html>

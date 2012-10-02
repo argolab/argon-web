@@ -22,8 +22,6 @@ class BoardHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("templates/board.html", IsLogin = True)
 
-
-
 class Application(tornado.web.Application):
    def __init__(self):
         handlers = [
