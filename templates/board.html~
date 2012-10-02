@@ -1,0 +1,103 @@
+{% extends 'basis2.html' %}
+
+{% block righttop %}
+   <div class="row-fluid">
+       <div class="span4">
+	   <img src="/static/images/board.jpg" class="img-rounded">
+       </div>
+       <div class="span8" id="board-name">
+	   <h4>爱是我们的责任</h4>
+	   <span>版主：sssssjmf</span>
+       </div>
+   </div>
+   <hr />
+   <div>爱只是一颗明亮的流行，需要我们用毕业的时间去怀念那个瞬间的美好与感动</div>
+   <hr />
+   <h4>版内公告</h4>
+   <p>明天下午4点半万记糖水店BG</p>
+   <p>热心的水手SSCST快要生日了，大家做好准备呐</p>
+   <p>公考的朋友加油！</p>
+{% end %}
+
+{% block rightbuttom %}
+  <h3>站内动态</h3>
+  <hr />
+  <p>LTiaost加入了我们的讨论</p>
+  <p>sscst发表了话题“如何挖墙角？”</p>
+{% end %}
+
+{% block mainblock %}
+   <div class="alert alert-success" id="board-warning">
+       <div>
+	   如何看到话题？请使用<button class="btn btn-success">同主题阅读</button>
+	   还有......<button class="btn btn-success">精华帖阅读</button><button class="btn btn-success">文摘阅读</button>
+       </div>
+   </div>
+
+   <div class="dark">
+       <table class="table table-striped table-condensed">
+	   <tr>
+	       <td>这个傻B又是谁？</td>
+	       <td class="muted">今天10：38</td>
+	       <td>[wangyufei]</td>
+	       <td><span class="badge badge-info">34</span></td>
+	   </tr>
+	   <tr>
+	       <td>一大早来搞数据</td>
+	       <td class="muted">今天10：40</td>
+	       <td>[luoyanfei]</td>
+	       <td><span class="badge badge-warning">23</span></td>
+	   </tr>
+	   <tr>
+	       <td>T T 一个人在广州过中秋</td>
+	       <td class="muted">今天10：42</td>
+	       <td>[sysuloverBy]</td>
+	       <td><span class="badge badge-inverse">47</span></td>
+	   </tr>
+	   <tr>
+	       <td>共产党员薄熙来淫魔真面目被揭</td>
+	       <td class="muted">今天10：48</td>
+	       <td>[jiiset]</td>
+	       <td><span class="badge badge-success">89</span></td>
+	   </tr>
+	   <tr>
+	       <td>这个傻B又是谁？</td>
+	       <td class="muted">今天10：58</td>
+	       <td>[sscst]</td>
+	       <td><span class="badge badge-important">34</span></td>
+	   </tr>
+	   <tr>
+	       <td>一大早来搞数据</td>
+	       <td class="muted">今天11：01</td>
+	       <td>[TTistd]</td>
+	       <td><span class="badge badge-success">67</span></td>
+	   </tr>
+	   <tr>
+	       <td>IBM x40 500元</td>
+	       <td class="muted">今天11：05</td>
+	       <td>[cresspess]</td>
+	       <td><span class="badge badge-inverse">12</span></td>
+	   </tr>
+	   <tr>
+	       <td>04级骨灰人物飘过</td>
+	       <td class="muted">今天11：07</td>
+	       <td>[garyjiio]</td>
+	       <td><span class="badge badge-important">34</span></td>
+	   </tr>
+	   <tr>
+	       <td>这个傻B又是谁？</td>
+	       <td class="muted">今天11：08</td>
+	       <td>[inugvd]</td>
+	       <td><span class="badge badge-warning">43</span></td>
+	   </tr>
+	   <tr>
+	       <td>不是我选择了上帝，而是上帝选择了我</td>
+	       <td class="muted">今天12：02</td>
+	       <td>[supersudo]</td>
+	       <td><span class="badge badge-info">109</span></td>
+	   </tr>
+        </table>
+   </div>
+{% end %}
+
+   

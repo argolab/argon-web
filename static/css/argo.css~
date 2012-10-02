@@ -1,0 +1,160 @@
+body{
+   background:url('/static/images/background.jpg') ;
+   background-repeat:repeat ;
+}
+#left-banner{
+   width:17%;
+   margin-left:0;
+   padding:0;
+}
+
+#user-banner{
+  background-color:white ;
+  padding:3%;
+}
+
+#left{
+  margin-left:10%;
+}
+
+#main-block{
+  width:78%;
+  margin-right:0 0 0 3%;
+ 
+}
+
+.dark{
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 15px 15px 15px 15px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.9);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.9);
+    box-shadow: 0 1px 2px rgba(0,0,0,.9);
+    background-color:white;
+}
+
+.bigger{
+    -moz-transform : scale(1.6);
+    -webkit-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform:scale(1.6);
+    filter: progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand',M11='1.6',M22='1.6');
+}
+
+#picture-div{
+  margin:10% 0 2% 2%;
+}
+
+#name-div{
+  margin:5% 0.5% 0 0;
+  padding-bottom:3%;
+  font-weight:bold;
+  font-size:30;
+  font-family: Georgia, serif;
+}
+
+
+.left{
+  margin-left:3%;
+}
+
+.btn-left{
+  margin-left:10%;
+}
+
+#user-buttom{
+  margin-left:8%;
+}
+
+#advertise{
+  margin-top:5%;
+  padding:3%;
+}
+
+#tips{
+  margin-left:3%;
+  font-family: Georgia, serif;
+  color:#00BBFF;
+  font-size:20px;
+  background-color:white;
+}
+
+.message{
+  margin-top:1%;
+}
+
+#top-ten{
+  background-color:white;
+  padding:2%;
+}
+
+#right-top{
+  padding:2%;
+}
+
+.right-buttom{
+  padding:2%;
+  margin-top:3%;
+}
+
+#board-list{
+   padding:2% 1%;
+
+}
+
+
+#board-name{
+   text-align:center;
+}
+
+.pre{
+  clear:both;
+  height:0;
+}
+
+#passage{
+  margin-top:2%;
+}
+
+.pic{
+  margin:2% 0;
+  padding:2% 0; 
+  border-bottom:solid 1px grey;
+  font-weight:bold;
+}
+
+#form-login{
+   margin-left:1%;
+}
+
+
+
+h1{
+     font-family: Georgia, serif;
+     color:blue;
+     font-size:45px;
+}
+
+#left-btn{
+  margin-left:18%;
+}
+
+#email-tool{
+  margin-left:12% ;
+  font-size:17px;
+  font-weight:bold;
+  text-align:centent;
+}
+
+#btn-operation{
+  margin:1% 18%;
+}
+
+#email-title{
+  margin:2%;
+}
+
+
+
+
+

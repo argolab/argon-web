@@ -1,0 +1,68 @@
+{% extends 'banner.html' %}
+
+{% block banner %}
+     <div class="span2 pull-left" id="user-beside-banner">
+           <div class="well sidebar-nav user-banner">
+                <ul class="nav nav-list">
+                    <li>
+                      <div class="container-fluid">
+                         <div class="row-fluid">
+                            <!---<div style="height:60px"></div>--->
+                            <span>
+                                <img  class="argo-img" src="/static/images/gcc.jpg"/>
+                                <p>guest</p>
+                            </span>
+                          </div>
+                        </div> 
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="icon-folder-open"></i>收藏夹</a></li>
+                        <li><a href="#"><i class="icon-envelope"></i>邮件</a></li>
+                        <li><a href="#"><i class="icon-cog"></i>个人设置</a></li>
+                        <li><a href="#"><i class="icon-flag"></i>帮助</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">公告..</a></li>
+                    </ul>
+             </div><!--/.well -->
+    
+             <div class="well sidebar-nav user-banner">
+                  <ul class="nav nav-list">
+                      <li class="divider"></li>
+                      <li><a href="#">广告</a></li>
+                  </ul>
+              </div><!--/.well -->
+    </div> 
+    <div class="container-fluid" id="main-block">
+         <div class="row-fluid">
+	   <!--- <div style="height:70px"></div>--->
+            <div class="span8">
+                {% block content %}
+                {% endblock %}
+            </div>
+	     <div id="push-banner" class="pull-right user-banner sidebar-nav">
+	       <div id="push-helper" class="pull-right"></div>
+	       <div id="push-container" class="push-right">
+		 <div class="container-fluid">
+		   <ul class="nav nav-list">
+		     <li>argo工具栏</li>
+                     <li class="divider"></li>
+		     <li><a href="#">查看好友状态</li>
+		     <li><a href="#">板块十大</li>
+		     <li><a href="#">个人文集</li>
+		   </ul>
+		 </div>
+	       </div>
+	     </div>
+           </div> 
+    <!-- row-fluid -->
+           <hr/>
+           <footer class="footer">
+             <p>&copy Life is originally a tragedy.</p>
+           </footer>
+
+    </div> <!--/ fluid-container -->
+
+{% endblock %}
+   
+
+

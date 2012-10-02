@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+from flask import url_for, Flask , render_template , flash , request,session , g , redirect 
+from werkzeug import secure_filename
+import os
+SECRET_KEY = 'development key'
+UPLOAD_F = '/home/wangyufei/webtest/upload'
+USERNAME = '123'
+PASSWORD = '456'
+app = Flask(__name__)
+app.config.from_object(__name__)
+app.config.from_envvar('FLASKR_SETTINGS', silent=True)
+
+
+@app.route('/post')
+def hell02() :
+   return render_template("post.html")
+
+@app.route('/board')
+def hell03() :
+   return render_template("board.html")
+
+@app.route('/index')
+def hell04() :
+   return render_template("index.html")
+
+@app.route('/email')
+def hell05() :
+   return render_template("email.html")
+
+@app.route('/personal-email')
+def hell06() :
+   return render_template("personal-email.html")
+
+if __name__ == "__main__" :
+     app.debug = True
+     app.run( host = '0.0.0.0' )
+
+
