@@ -1,11 +1,37 @@
 {% extends "base.html" %}
 
+{% block top %}
+  <div class="row-fluid">
+      <div class="span4 offset2" id="title">
+	<p><h1>逸仙时空</h1></p>
+	<p><h3 class="muted">创造中大人自己的网络空间</h3></p>
+      </div>
+      <div class="span4 well well-small" id="argo-logo">
+	<div class="row-fluid">
+	    <div class="span4 img">
+	        <img src="/static/img/argo_new.jpg">
+	    </div>
+	    <div class="span7" id="logo-text">
+	        <span>8000校友与您共同畅游<br />
+	         200个版面与您一起话题互动<br />
+	         53位版主与您一起版面讨论<br />
+	         1个argo创造您的精彩网络生活</span>
+	    </div>
+	</div>
+      </div>
+    </div>
+{% end %}
+
 {% block leftsidebar %}
 <div class="cell-group">
   <div id="userbox">
     <img id="userbox-img" src="static/img/gcc.jpg">
     <div id="userbox-profit">
-      LTaoist
+      <ul class="nav">
+	  <li>LTaoist</li>
+	  <li>狮子座</li>
+	  <li>男生</li>
+      </ul>
     </div>
   </div>
   <div class="dashed-seq"></div>
@@ -14,6 +40,7 @@
     <ol class="boardset">
       <li>Say</li>
       <li>News</li>
+      <li>Linux<li>
     </ol>
   </div>
 </div>

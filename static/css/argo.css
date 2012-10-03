@@ -10,15 +10,17 @@ body{
     background:white;
     position:relative;
     margin-bottom:2em;
+    padding:0;
 }
 
 .cell-title{
     font-size:.778em;
     line-height:2.33em;
-    color:silver;
     padding-left:1em;
     border-bottom:1px dashed #dadada;
-    color:#006700
+    color:#006700;
+    background:	#F5F5F5;
+    text-align:center;
 }
 
 .cell-content{
@@ -81,7 +83,7 @@ body{
 }
 
 #userbox{
-    margin:1.21em 1em 1.47em 1.46em;
+    margin:1.21em 1em 1.47em 4.46em;
     min-height:72px;
     position:relative;
 }
@@ -119,6 +121,36 @@ body{
     padding:2em;
     color:white;
 }
+
+#title{
+  margin-top:1.3%;
+  color:#006700;
+}
+
+#title > h3{
+  color:silver
+}
+
+.img{
+  margin:0;
+  padding:0;
+}
+
+#argo-logo{
+  padding:1.8%;
+}
+
+#logo-text{
+  padding-top:4%;
+}
+
+.smaller{ 
+   -moz-transform : scale(0.8); 
+   -webkit-transform: scale(0.8); 
+   -o-transform: scale(0.8); 
+   transform:scale(0.8); 
+   filter: progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand',M11='0.8',M22='0.8'); 
+} 
 
 /* body{ */
 /*    background:url('/static/images/background.jpg') ; */
