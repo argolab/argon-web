@@ -27,6 +27,11 @@ body{
     margin:1em 1.2em;
 }
 
+.page-title{
+    border-bottom:1px solid #cecece;
+    line-height:1.4em;
+}
+
 .seq{
     border-bottom:1px solid #efefef;
     margin:.618em;
@@ -91,6 +96,62 @@ body{
 .plt-meta a{
 }
 
+.postlist li{
+    position:relative;
+    height:50px;
+    margin-bottom:1em;
+    padding:.3em 0;
+    border-top:1px dashed #c0c0c0;
+}
+
+.postlist img{
+    position:absolute;
+    left:0;
+    top:8px;
+    height:40px;
+    width:40px;
+}
+
+.pl-1{
+    margin:0;
+    padding:0;
+    margin-left:55px;
+    position:absolute;
+}
+
+.pl-1 h3{
+    font-size:1.2em;
+    line-height:30px;
+    padding:0;
+    margin:0;
+    font-weight:normal;
+}
+
+.pl-2{
+    position:absolute;
+    left:0;
+    top:32px;
+    margin-left:55px;
+}
+
+.pl-f{
+    position:absolute;
+    right:0;
+    top:12px;
+}
+
+.postlist a{
+    color: black;
+}
+
+.postlist .read{
+    color: #dadada;
+}
+
+.postlist .read a{
+    color: #dadada;
+}
+ 
 .boardlist{
     list-style-type:none;
     position:relative;

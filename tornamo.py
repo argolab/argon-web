@@ -1,8 +1,12 @@
+#!/usr/bin/python2
+# -*- coding: utf-8 -*-
+
 import tornado.ioloop
 import tornado.web
 import os.path
 import tornado.options
 import tornado.httpserver
+from datetime import datetime
 
 class LoginHandler(tornado.web.RequestHandler):
     def initialize(self):
@@ -20,7 +24,80 @@ class EmailHandler(tornado.web.RequestHandler):
 
 class BoardHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("templates/board.html", IsLogin = True)
+        post = [
+            {
+                "title":"这傻b是谁",
+                "owner":"LTaoist",
+                "replyid":3,
+                "posttime": '刚刚',
+                "read":False,
+                },
+            {
+                "title":"Re: 这傻b是谁",
+                "owner":"LTaoist",
+                "replyid":4,
+                "posttime": '刚刚',
+                "read":False,
+                },
+            {
+                "title":"Re: 这傻b是谁",
+                "owner":"LTaoist",
+                "replyid":3,
+                "posttime": '刚刚',
+                "read":True,
+                },
+            {
+                "title":"老了",
+                "owner":"gcc",
+                "replyid":7,
+                "posttime": '刚刚',
+                "read":False,
+                },
+            {
+                "title":"这傻b是谁",
+                "owner":"LTaoist",
+                "replyid":3,
+                "posttime": '刚刚',
+                "read":False,
+                },
+            {
+                "title":"Re: 这傻b是谁",
+                "owner":"LTaoist",
+                "replyid":4,
+                "posttime": '刚刚',
+                "read":False,
+                },
+            {
+                "title":"Re: 这傻b是谁",
+                "owner":"LTaoist",
+                "replyid":3,
+                "posttime": '刚刚',
+                "read":True,
+                },
+            {
+                "title":"老了",
+                "owner":"gcc",
+                "replyid":7,
+                "posttime": '刚刚',
+                "read":False,
+                },
+            {
+                "title":"Re: 这傻b是谁",
+                "owner":"LTaoist",
+                "replyid":3,
+                "posttime": '刚刚',
+                "read":True,
+                },
+            {
+                "title":"老了",
+                "owner":"gcc",
+                "replyid":7,
+                "posttime": '刚刚',
+                "read":False,
+                },
+            ]
+        post = post * 4
+        self.render("templates/board.html", post=post)
 
 class Application(tornado.web.Application):
    def __init__(self):

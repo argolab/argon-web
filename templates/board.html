@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="cell-group">
+  <div class="pull-right btn-toolbar">
+	<a class="btn btn-small btn-info">收藏版面</a>
+	<button class="btn btn-small btn-success">发表主题</button>
+	<button class="btn btn-small">同主题</button>
+    <div class="btn-group">
+      <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">
+        过滤器
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a>只读精华</a></li>
+        <li><a>只读美文</a></li>
+      </ul>
+    </div>
+  </div>
+  <h1 class="page-title">Linux</h1>
+  <ul class="postlist unstyled">
+    {% for p in post %}
+    <li{% if p['read'] %} class="read"{% end %}>
+      <img src="/static/img/guest1.jpeg"/>
+      <div class="pl-1">
+        <h3><a href="#">{{ p['title'] }}</a></h3>
+      </div>
+      <div class="pl-2">
+        <a href="/user/{{ p['owner'] }}">{{ p['owner'] }}</a>
+      </div>
+      <div class="pl-f">
+        {{ p['posttime'] }}
+      </div>
+    </li>
+    {% end %}
+  </ul>
+</div>
+{% end %}
+
+{% block rightsidebar %}
+<div class="cell-group">
+  <h4 class="cell-title">友情版面...</h4>
+  <div class="cell-content">
+	<ol class="boardset">
+	  <li>Programming</li>
+	  <li>编程技巧</li>
+	  <li>新argo开发</li>
+	</ol>
+  </div>
+</div>
+
+<div class="cell-group">
+  <h4 class="cell-title">新加入的朋友</h4>
+  <div class="cell-content">
+	<ol class="boardset">
+	  <li class="pull-left"><img src="/static/img/guest1.jpeg" class=""><span>sscst<br />软件学院</span></li>
+	  <li class="pull-left"><img src="/static/img/guest2.jpeg" class=""><span>LTaoist<br />软件学院</span></li>
+	  <li><img src="/static/img/guest3.jpeg" class=""><span>gcc<br />信息学院</span></li>
+	</ol>
+  </div>
+</div>
+{% end %}
+
+{% block leftsidebar %}
+<div class="cell-group">
+  <div id="userbox">
+    <img id="userbox-img" src="static/img/gcc.jpg">
+    <div id="userbox-profit">
+      <ul class="nav">
+	    <li>LTaoist</li>
+	    <li>   </li>
+	    <li>  </li>
+      </ul>
+    </div>
+  </div>
+  <div class="dashed-seq"></div>
+  <div id="favbox">
+    <h4>   </h4>
+    <ol class="boardset">
+      <li>Say</li>
+      <li>News</li>
+      <li>Linux<li>
+    </ol>
+  </div>
+</div>
+<div class="cell-group">
+  <br/>
+  
+  <br/>
+  1
+</div>     
+{% end %}
