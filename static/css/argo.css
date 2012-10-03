@@ -1,24 +1,27 @@
+#navbar{
+    background:url('../i/bg-header2.png') repeat-x;
+}
+
 body{
-    background:#eee;
+    /* background:#eee; */
 }
 
 .cell-group{
-    box-shadow:0 3px 3px 2px #dadada;
-    border:1px solid #e6e6e6;
-    border-bottom: 3px solid #c0c0c0;
-    border-radius:8px;
+    /* box-shadow:0 0 2px #dadada; */
+    border-bottom:1px dashed #e6e6e6;
+    /* border-bottom: 2px solid #c0c0c0; */
+    /* border-radius:8px; */
     background:white;
     position:relative;
     margin-bottom:2em;
 }
 
 .cell-title{
-    font-size:.778em;
-    line-height:2.33em;
-    color:silver;
-    padding-left:1em;
-    border-bottom:1px dashed #dadada;
-    color:#006700
+    font-size:1em;
+    line-height:1.44em;
+    color:green;
+    padding-left:-1em;
+    /* border-bottom:1px dashed #dadada; */
 }
 
 .cell-content{
@@ -48,17 +51,45 @@ body{
     border-bottom:1px dashed green;
 }
 
+.plt-board,
+.plt-owner,
+.plt-time,
+.plt-renum{
+    margin-right:0.534em;
+}
+
 .plt-title{
-    /* font-size:1.45em; */
-    color:#2b2b2b;
+    font-size:1.45em;
 }
 
 .plt-meta{
-    font-size:.88em;
+    float:right;
+    position:relative;
+}
+
+.plt-board{
+    color:silver;
+    padding:1px 5px;
+    border:1px solid silver;
+}
+
+.plt-owner{
+    font-weight:bold;
+    color:gray;
+}
+
+.plt-renum{
+    border-radius:10px;
+    border:1px solid #dadada;
+    padding:1px 12px;
+    font-size:.777em;
+    background:#c0c0c0;
+    color:white;
+    font-weight:bold;
+    margin-left:1em;
 }
 
 .plt-meta a{
-    color:gray;
 }
 
 .boardlist{
@@ -78,6 +109,10 @@ body{
     text-align:center;
     line-height:1em;
     color:silver;
+}
+
+.content-wrapper{
+    padding:0 60px;
 }
 
 #userbox{
