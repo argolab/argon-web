@@ -31,6 +31,8 @@ class BoardHandler(tornado.web.RequestHandler):
                 "replyid":3,
                 "posttime": '刚刚',
                 "read":False,
+                "gmark":True,
+                "mmark":True,
                 },
             {
                 "title":"Re: 这傻b是谁",
@@ -38,6 +40,8 @@ class BoardHandler(tornado.web.RequestHandler):
                 "replyid":4,
                 "posttime": '刚刚',
                 "read":False,
+                "gmark":False,
+                "mmark":False,
                 },
             {
                 "title":"Re: 这傻b是谁",
@@ -45,6 +49,8 @@ class BoardHandler(tornado.web.RequestHandler):
                 "replyid":3,
                 "posttime": '刚刚',
                 "read":True,
+                "gmark":True,
+                "mmark":False,
                 },
             {
                 "title":"老了",
@@ -52,6 +58,8 @@ class BoardHandler(tornado.web.RequestHandler):
                 "replyid":7,
                 "posttime": '刚刚',
                 "read":False,
+                "gmark":False,
+                "mmark":True,
                 },
             {
                 "title":"这傻b是谁",
@@ -59,6 +67,8 @@ class BoardHandler(tornado.web.RequestHandler):
                 "replyid":3,
                 "posttime": '刚刚',
                 "read":False,
+                "gmark":False,
+                "mmark":False,
                 },
             {
                 "title":"Re: 这傻b是谁",
@@ -66,12 +76,16 @@ class BoardHandler(tornado.web.RequestHandler):
                 "replyid":4,
                 "posttime": '刚刚',
                 "read":False,
+                "gmark":False,
+                "mmark":False,
                 },
             {
                 "title":"Re: 这傻b是谁",
                 "owner":"LTaoist",
                 "replyid":3,
                 "posttime": '刚刚',
+                "gmark":False,
+                "mmark":False,
                 "read":True,
                 },
             {
@@ -79,6 +93,8 @@ class BoardHandler(tornado.web.RequestHandler):
                 "owner":"gcc",
                 "replyid":7,
                 "posttime": '刚刚',
+                "gmark":False,
+                "mmark":False,
                 "read":False,
                 },
             {
@@ -86,6 +102,8 @@ class BoardHandler(tornado.web.RequestHandler):
                 "owner":"LTaoist",
                 "replyid":3,
                 "posttime": '刚刚',
+                "gmark":False,
+                "mmark":False,
                 "read":True,
                 },
             {
@@ -93,10 +111,12 @@ class BoardHandler(tornado.web.RequestHandler):
                 "owner":"gcc",
                 "replyid":7,
                 "posttime": '刚刚',
+                "gmark":False,
+                "mmark":False,
                 "read":False,
                 },
             ]
-        post = post * 4
+        post = post * 2
         self.render("templates/board.html", post=post)
 
 class Application(tornado.web.Application):

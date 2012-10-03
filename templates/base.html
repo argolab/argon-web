@@ -11,11 +11,9 @@
 	<script src="/static/js/argo.js"></script>
   </head>
   <body>
-    <div id="nav-wrapper">
-      {% include "nav.html" %}
-    </div>
-    <div class="content-wrapper container-fluid">
-      <div class="row-fluid">
+    {% include "nav.html" %}
+    <div class="content-wrapper container">
+      <div class="row">
         <div class="span3">
           {% block leftsidebar %}{% end %}
         </div>

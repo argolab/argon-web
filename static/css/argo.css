@@ -99,9 +99,15 @@ body{
 .postlist li{
     position:relative;
     height:50px;
-    margin-bottom:1em;
+    /* margin-bottom:1em; */
     padding:.3em 0;
-    border-top:1px dashed #c0c0c0;
+    border:1px dashed #c0c0c0;
+    border-bottom:none;
+}
+
+.postlist li:hover{
+    border:1px solid #aac0da;
+    border-bottom:none;
 }
 
 .postlist img{
@@ -175,6 +181,14 @@ body{
     padding:0 60px;
 }
 
+.read{
+    color:#bbb;
+}
+
+.read a{
+    color:#bbb;
+}
+
 #userbox{
     margin:1.21em 1em 1.47em 1.46em;
     min-height:72px;
@@ -213,6 +227,48 @@ body{
     width:100%;
     padding:2em;
     color:white;
+}
+
+.gmark:after{
+    background:#04aef4;
+    content:"g";
+    font-size:.618em;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    color:white;
+    padding: 1px 9px 2px;
+}
+
+.mmark:after{
+    background:#d83a2e;
+    content:"m";
+    font-size:.618em;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    color:white;
+    padding: 1px 9px 2px;
+}    
+
+.read .gmark:after,
+.read .mmark:after{
+    background:#ccc;
+}
+
+.tag{
+    font-size:.618em;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    background:#ccc;
+    color:white;
+    padding: 1px 9px 2px;
+}
+
+.tag-blue{
+    background:#04aef4;
+}
+
+.tag-red{
+    background:#d83a2e;
 }
 
 /* body{ */
