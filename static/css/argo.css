@@ -24,7 +24,15 @@ body{
 }
 
 .cell-content{
-    margin:1em 1.2em;
+    margin:1em 0.4em;
+}
+
+.board-title{
+    margin:0.8em 1em;
+}
+
+.btn-top{
+   padding-top:2.5%;
 }
 
 .seq{
@@ -112,7 +120,7 @@ body{
 
 .boardset li{
     display:inline-block;
-    margin:auto .5em;
+    margin:auto .2em;
 }
 
 #footer{
@@ -132,8 +140,11 @@ body{
 }
 
 .img{
-  margin:0;
-  padding:0;
+  width:100%;
+}
+
+.post-img{
+  width:70%;
 }
 
 #argo-logo{
@@ -151,6 +162,16 @@ body{
    transform:scale(0.8); 
    filter: progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand',M11='0.8',M22='0.8'); 
 } 
+
+.smaller1{ 
+   -moz-transform : scale(0.3); 
+   -webkit-transform: scale(0.3); 
+   -o-transform: scale(0.3); 
+   transform:scale(0.3); 
+   filter: progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand',M11='0.3',M22='0.3');
+} 
+
+
 
 /* body{ */
 /*    background:url('/static/images/background.jpg') ; */
