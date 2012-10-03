@@ -15,7 +15,6 @@
         <li><a>只读美文</a></li>
       </ul>
     </div>
-    <a class="btn btn-small">收藏版面</a>
   </div>
   <h1 class="page-title">Linux</h1>
   <table class="table table-hover table-condensed" width="100%">
@@ -63,26 +62,45 @@
 
 {% block rightsidebar %}
 <div class="cell-group">
-  <h3>Linux</h3>
-  <!-- <h4 class="cell-title">友情版面...</h4> -->
+  <a class="btn btn-small btn-info pull-right">收藏该版</a>
   <div class="cell-content">
-	<ol class="boardset">
-	  <li>Programming</li>
-	  <li>编程技巧</li>
-	  <li>新argo开发</li>
-	</ol>
+    <h3>Linux</h3>
+    Linux 是一系列类 Unix 计算机操作系统的统称。
+    该操作系统的核心为 Linux 内核。Linux
+    操作系统也是软件和开放源代码发展中最著名的例子。
   </div>
 </div>
 
 <div class="cell-group">
-  <h4 class="cell-title">新加入的朋友</h4>
-  <div class="cell-content">
-	<ol class="boardset">
-	  <li class="pull-left"><img src="/static/img/guest1.jpeg" class=""><span>sscst<br />软件学院</span></li>
-	  <li class="pull-left"><img src="/static/img/guest2.jpeg" class=""><span>LTaoist<br />软件学院</span></li>
-	  <li><img src="/static/img/guest3.jpeg" class=""><span>gcc<br />信息学院</span></li>
-	</ol>
-  </div>
+  <h4 class="cell-title">版主</h4>
+  <ul class="cell-content padding-l10 userset userset-small unstyled">
+    <li>
+      <img src="/static/img/guest2.jpeg"/>
+      <a href="#">humiaozuzu</a>
+    </li>
+    <li>
+      <img src="/static/img/guest2.jpeg"/>
+      <a href="#">humiaozuzu</a>
+    </li>
+  </ul>
+</div>
+
+<div class="cell-group">
+  <h4 class="cell-title">最近访客</h4>
+  <ul class="cell-content padding-l10 userset userset-small unstyled">
+    <li>
+      <img src="/static/img/guest1.jpeg"/>
+      <a href="#">路人甲</a>
+    </li>
+    <li>
+      <img src="/static/img/guest3.jpeg"/>
+      <a href="#">路人乙</a>
+    </li>
+    <li>
+      <img src="/static/img/guest4.jpeg"/>
+      <a href="#">路人丁</a>
+    </li>
+  </ul>
 </div>
 {% end %}
 

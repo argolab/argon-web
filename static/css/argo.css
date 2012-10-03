@@ -271,6 +271,20 @@ body{
     background:#d83a2e;
 }
 
+.userset li{
+    height:48px;
+    margin:5px auto;
+}
+
+.userset-small li img{
+    height:32px;
+    width:32px;
+}
+
+.padding-l10{
+    padding-left:10%;
+}
+
 /* body{ */
 /*    background:url('/static/images/background.jpg') ; */
 /*    background-repeat:repeat ; */

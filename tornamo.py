@@ -116,7 +116,7 @@ class BoardHandler(tornado.web.RequestHandler):
                 "read":False,
                 },
             ]
-        post = post * 2
+        post = post * 3
         self.render("templates/board.html", post=post)
 
 class Application(tornado.web.Application):
