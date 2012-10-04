@@ -20,7 +20,17 @@ class LoginHandler(tornado.web.RequestHandler):
 
 class EmailHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("templates/mail.html")
+        mails = [
+            {
+                "title":"这傻B是谁",
+                "touserid":"LTaoist",
+                "fromuserid":"gcc",
+                "posttime":"刚刚",
+                "read":False,
+                },
+            ]
+        mails = mails * 20
+        self.render("templates/mail.html", mails=mails)
 
 class BoardHandler(tornado.web.RequestHandler):
     def get(self):
