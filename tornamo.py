@@ -12,15 +12,15 @@ class LoginHandler(tornado.web.RequestHandler):
     def initialize(self):
         self.Islogin = False
     def get(self):
-        self.render("templates/index.html" , IsLogin = self.Islogin)
+        self.render("templates/index.html")
     def post(self):
-        if self.get_argument("Username") == "wangyufei" and self.get_argument("Password")=="19920820" :
-            self.Islogin = True 
-        self.render("templates/index.html" , IsLogin = self.Islogin )
+        if self.get_argument("Username") == "wangyufei" and\
+                self.get_argument("Password")=="19920820" :
+            self.render("templates/index.html")
 
 class EmailHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("templates/email.html", IsLogin = True)
+        self.render("templates/mail.html")
 
 class BoardHandler(tornado.web.RequestHandler):
     def get(self):
@@ -123,7 +123,7 @@ class Application(tornado.web.Application):
    def __init__(self):
         handlers = [
              (r"/", LoginHandler),
-             (r"/email", EmailHandler),
+             (r"/mail", EmailHandler),
              (r"/board", BoardHandler)
         ]
         settings = dict(

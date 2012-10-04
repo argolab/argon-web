@@ -2,18 +2,20 @@
 
 {% block main %}
 <div class="cell-group">
-  <div class="pull-right btn-toolbar">
-	<button class="btn btn-small btn-success">发表主题</button>
-	<button class="btn btn-small">同主题</button>
-    <div class="btn-group">
-      <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">
-        过滤器
-        <span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a>只读精华</a></li>
-        <li><a>只读美文</a></li>
-      </ul>
+  <div class="pull-right">
+    <div class="pull-right btn-toolbar">
+	  <button class="btn btn-small btn-success">发表主题</button>
+	  <button class="btn btn-small">同主题</button>
+      <div class="btn-group">
+        <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">
+          过滤器
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a>只读精华</a></li>
+          <li><a>只读美文</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <h1 class="page-title">Linux</h1>
@@ -38,26 +40,36 @@
       </tr>
       {% end %}
     </tbody>
-  </table>  
+  </table>
+  <div class="pagination pagination-centered">
+    <ul>
+      <li><a href="#">上一页</a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">下一页</a></li>
+    </ul>
+  </div>
 </div>
 {% end %}
 
-  <ul class="postlist unstyled">
-    {% for p in post %}
-    <li{% if p['read'] %} class="read"{% end %}>
-      <img src="/static/img/guest1.jpeg"/>
-      <div class="pl-1">
-        <h3><a href="#">{{ p['title'] }}</a></h3>
-      </div>
-      <div class="pl-2">
-        <a href="/user/{{ p['owner'] }}">{{ p['owner'] }}</a>
-      </div>
-      <div class="pl-f">
-        {{ p['posttime'] }}
-      </div>
-    </li>
-    {% end %}
-  </ul>
+<ul class="postlist unstyled">
+  {% for p in post %}
+  <li{% if p['read'] %} class="read"{% end %}>
+    <img src="/static/img/guest1.jpeg"/>
+    <div class="pl-1">
+      <h3><a href="#">{{ p['title'] }}</a></h3>
+    </div>
+    <div class="pl-2">
+      <a href="/user/{{ p['owner'] }}">{{ p['owner'] }}</a>
+    </div>
+    <div class="pl-f">
+      {{ p['posttime'] }}
+    </div>
+  </li>
+  {% end %}
+</ul>
 
 
 {% block rightsidebar %}
@@ -102,6 +114,24 @@
     </li>
   </ul>
 </div>
+
+<div class="cell-group">
+  <h4 class="cell-title">站内投票</h4>
+  <p>你是吃饭了还是吃饭了？</p>
+  <form class="form-inline">
+    <label class="radio">
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      我吃饭了
+    </label>
+    <label class="radio">
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+      我吃饭了
+    </label>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">提交</button>
+    </div>
+  </form>
+</div>
 {% end %}
 
 {% block leftsidebar %}
@@ -120,9 +150,9 @@
   <div id="favbox">
     <h4>收藏夹</h4>
     <ol class="boardset">
-      <li>Say</li>
-      <li>News</li>
-      <li>Linux<li>
+      <li><a href="#">Say</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Linux</a><li>
     </ol>
   </div>
 </div>
