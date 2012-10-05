@@ -27,7 +27,7 @@
 
 {% block main %}
 <div class="cell-group">
-  <ul class="cell-content nav nav-pills">
+  <ul class="cell-content nav nav-tabs">
     <li class="active">
       <a href="#">十大</a>
     </li>
@@ -38,99 +38,26 @@
       <a href="#">科技</a>
     </li>
   </ul>
-  <ol class="postlist-topten unstyled">
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    <li class="plt-hotpost">
-      <a class="plt-title" href="#">这傻B是谁2333333333333333333333333333333333333333333</a>
-      <span class="plt-meta">
-        <a class="plt-board" href="#">Say</a>
-        <a class="plt-owner" href="3">LTaoist</a>
-        <span class="plt-time">前5分钟</span>
-        <span class="plt-renum">4</span>
-      </span>
-    </li>
-    
-  </ol>
+    <table class="table table-hover table-condensed" width="100%">
+    <thead>
+      <tr>
+        <th width="auto">标题</th>
+        <th width="20%">作者</th>
+        <th width="20%">发表时间</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in post %}
+      <tr>
+        <td>
+          <a href="#">{{ p['title'] }}</a>
+        </td>
+        <td><a href="#">{{ p['owner'] }}</td>
+        <td>{{ p['posttime'] }}</td>
+      </tr>
+      {% end %}
+    </tbody>
+  </table>
 </div>
 <div class="cell-group">
   <h3 class="cell-title">讨论区导航</h3>
@@ -197,11 +124,15 @@
 </div>
 <div class="cell-group">
   <h4 class="cell-title">新的发言者</h4>
-  <div class="cell-content">
-    <img src="/static/img/guest1.jpeg"/>
-    <a href="#">LTaoist</a>
-    回复了<a href="#">今天你吃饭了吗</a>
-  </div>
+  <ul class="cell-content padding-l10 userset userset-small unstyled">
+    <li>
+      <img src="/static/img/guest1.jpeg"/>
+      <span>
+        <a href="#">LTaoist</a>
+        回复了<a href="#">今天你吃饭了吗</a>
+      </span>
+    </li>
+  </ul>
 </div>
 {% end %}
   

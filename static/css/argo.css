@@ -2,6 +2,10 @@
     background:url('../i/bg-header2.png') repeat-x;
 }
 
+#container{
+    padding-top:2em;
+}
+
 body{
     /* background:#eee; */
 }
@@ -12,6 +16,7 @@ body{
     /* border-bottom: 2px solid #c0c0c0; */
     /* border-radius:8px; */
     position:relative;
+    /* margin-top:2em; */
     margin-bottom:2em;
 }
 
@@ -168,8 +173,8 @@ body{
 }
 
 .boardlist>li>h4{
-    display:block;
     float:left;
+    clear:none;
     width:20%;
     font-size:1em;
     text-align:center;
@@ -177,9 +182,12 @@ body{
     color:silver;
 }
 
-.content-wrapper{
-    padding:0 60px;
-}
+.boardlist>li>h4+ol{
+    margin-left:20%;
+    /* padding-left:2em; */
+    width:70%;
+    clear:none;
+}    
 
 .read{
     color:#bbb;
@@ -225,8 +233,11 @@ body{
 #footer{
     background:#2b2b2b;
     width:100%;
-    padding:2em;
     color:white;
+}
+
+#footer-content{
+    padding:2em;
 }
 
 .gmark:after{
@@ -279,6 +290,17 @@ body{
 .userset-small li img{
     height:32px;
     width:32px;
+    float:left;
+}
+
+.userset-small span{
+    display:block;
+    margin-left:40px;
+}
+
+.userset li>img+a{
+    display:block;
+    margin-left:40px;
 }
 
 .padding-l10{

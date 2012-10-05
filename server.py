@@ -9,14 +9,24 @@ import tornado.httpserver
 from datetime import datetime
 
 class LoginHandler(tornado.web.RequestHandler):
-    def initialize(self):
-        self.Islogin = False
+    
     def get(self):
-        self.render("templates/index.html")
-    def post(self):
-        if self.get_argument("Username") == "wangyufei" and\
-                self.get_argument("Password")=="19920820" :
-            self.render("templates/index.html")
+        post = [
+            {
+                "title":"这傻b是谁",
+                "owner":"LTaoist",
+                "renum":3,
+                "posttime": '刚刚',
+                },
+            {
+                "title":"吃饭了吗",
+                "owner":"gcc",
+                "renum":4,
+                "posttime": '刚刚',
+                },
+            ]
+        post = post * 5
+        self.render("templates/index.html", post=post)
 
 class EmailHandler(tornado.web.RequestHandler):
     def get(self):
